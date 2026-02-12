@@ -4,131 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flipkart Assignment</title>
-    <style>
-      .category-item {
-        transition: 0.3s;
-      }   
-      .category-item:hover {
-        background-color: #f5f5f5;
-        cursor: pointer;
-      }
-      .category-item:hover p {
-        color: #2874f0;
-      }
-      .category-item img {
-        transition: 0.3s;
-      }
-      .category-item:hover img {
-        transform: scale(1.05);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="Image/Flipkart_logo.jpg" class="img-fluid" style="width: 6rem" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-          <span class="navbar-toggler-icon"></span>
+ <body>
+
+                                                  <!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+      <img src="Image/Flipkart_logo.jpg" class="img-fluid" style="width: 6rem"/>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+
+      <form class="flex-grow-1 mx-4">
+        <div class="input-group">
+          <input class="form-control" type="search"
+            placeholder="Search for products, brands and more"/>
+          <span class="input-group-text bg-white">
+            <i class="bi bi-search text-primary"></i>
+          </span>
+        </div>
+      </form>
+
+      <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center ms-auto">
+
+        <button class="btn btn-light text-primary px-4 py-2 mb-2 mb-lg-0 me-lg-4">
+          Login
         </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <form class="flex-grow-1 mx-4">
-            <div class="input-group">
-              <input class="form-control" type="search" placeholder="Search for products, brands and more" />
-              <span class="input-group-text bg-white">
-                <i class="bi bi-search text-primary"></i>
-              </span>
-            </div>
-          </form>
-          <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center ms-auto">
-            <button class="btn btn-light text-primary px-4 py-2 mb-2 mb-lg-0 me-lg-4 mt-sm-2 mt-md-2">
-              Login
-            </button>
-            <div class="dropdown mb-2 mb-lg-0 me-lg-4">
-              <a class="text-white text-decoration-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Notification</a></li>
-                <li><a class="dropdown-item" href="#">24x7 Support</a></li>
-                <li><a class="dropdown-item" href="#">Advertise</a></li>
-              </ul>
-            </div>
-            <a href="#" class="text-white text-decoration-none d-flex align-items-center">
-              <i class="bi bi-cart-fill me-2"></i> Cart
-            </a>
-          </div>
-        </div>  
-    </nav>
+
+        <div class="dropdown mb-2 mb-lg-0 me-lg-4">
+          <a class="text-white text-decoration-none dropdown-toggle ms-4"
+             href="#" data-bs-toggle="dropdown">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Notification</a></li>
+            <li><a class="dropdown-item" href="#">24x7 Support</a></li>
+            <li><a class="dropdown-item" href="#">Advertise</a></li>
+          </ul>
+        </div>
+
+        <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+          <i class="bi bi-cart-fill ms-2"></i> Cart
+        </a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+                                                <!-- Category Card -->
+
+
 <div class="container-fluid px-0">
   <div class="card shadow-sm rounded-0">
     <div class="card-body">
-      <div class="row text-center">
-
-        <div class="col category-item">
-          <img src="Image/Top_offers.jpg" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0">Top Offers</p>
-        </div>
-
-        <div class="col category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/f9b3eb64f674d8c1.png?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0">Grocery</p>
-        </div>
+      <div class="category-scroll">
+        <div class="row text-center flex-nowrap">
 
 
-        <div class="col category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/994d28486acb582e.jpg?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0">Mobiles</p>
-        </div>
+          <div class="col text-center category-item">
+            <img src="Image/Top_offers.jpg" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0">Top Offers</p>
+          </div>
 
-        <div class="col dropdown category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/6ab92a9fcdd8bd9a.jpg?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Fashion</p>
-          <ul class="dropdown-menu text-start">
-            <li><a class="dropdown-item" href="#">Men's Wear</a></li>
-            <li><a class="dropdown-item" href="#">Women's Wear</a></li>
-            <li><a class="dropdown-item" href="#">Kids</a></li>
-            <li><a class="dropdown-item" href="#">Footwear</a></li>
-          </ul>
-        </div>
+          <div class="col text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/f9b3eb64f674d8c1.png?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0">Grocery</p>
+          </div>
 
+          <div class="col text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/994d28486acb582e.jpg?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0">Mobiles</p>
+          </div>
+          <div class="col dropdown text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/6ab92a9fcdd8bd9a.jpg?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0 dropdown-toggle"
+               data-bs-toggle="dropdown" style="cursor:pointer;">
+              Fashion
+            </p>
+            <ul class="dropdown-menu text-start">
+              <li><a class="dropdown-item" href="#">Men's Wear</a></li>
+              <li><a class="dropdown-item" href="#">Women's Wear</a></li>
+              <li><a class="dropdown-item" href="#">Kids</a></li>
+              <li><a class="dropdown-item" href="#">Footwear</a></li>
+            </ul>
+          </div>
+          <div class="col dropdown text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/72c2253903ee3f96.jpg?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0 dropdown-toggle"
+               data-bs-toggle="dropdown" style="cursor:pointer;">
+              Electronics
+            </p>
+            <ul class="dropdown-menu text-start">
+              <li><a class="dropdown-item" href="#">TV</a></li>
+              <li><a class="dropdown-item" href="#">Refrigerator</a></li>
+              <li><a class="dropdown-item" href="#">Laptop</a></li>
+              <li><a class="dropdown-item" href="#">Oven</a></li>
+            </ul>
+          </div>
+          <div class="col dropdown text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/1adcd2b008325e5e.jpg?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0 dropdown-toggle"
+               data-bs-toggle="dropdown" style="cursor:pointer;">
+              Home
+            </p>
+            <ul class="dropdown-menu text-start">
+              <li><a class="dropdown-item" href="#">Furniture</a></li>
+              <li><a class="dropdown-item" href="#">Home Decor</a></li>
+              <li><a class="dropdown-item" href="#">Kitchen & Dining</a></li>
+              <li><a class="dropdown-item" href="#">Cleaning & Utility</a></li>
+            </ul>
+          </div>
+          <div class="col dropdown text-center category-item">
+            <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/ad078723c45e639b.png?q=80" style="width:5rem;" alt="">
+            <p class="mt-2 mb-0 dropdown-toggle"
+               data-bs-toggle="dropdown" style="cursor:pointer;">
+              Appliances
+            </p>
+            <ul class="dropdown-menu text-start">
+              <li><a class="dropdown-item" href="#">Air Conditioners</a></li>
+              <li><a class="dropdown-item" href="#">Washing Machines</a></li>
+              <li><a class="dropdown-item" href="#">Microwave Ovens</a></li>
+              <li><a class="dropdown-item" href="#">Water Purifiers</a></li>
+            </ul>
+          </div>
 
-        <div class="col dropdown category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/72c2253903ee3f96.jpg?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Electronics</p>
-          <ul class="dropdown-menu text-start">
-            <li><a class="dropdown-item" href="#">T.V</a></li>
-            <li><a class="dropdown-item" href="#">Refrigerator</a></li>
-            <li><a class="dropdown-item" href="#">Laptop</a></li>
-            <li><a class="dropdown-item" href="#">Oven</a></li>
-          </ul>
-        </div>
-
-        <div class="col dropdown text-center category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/1adcd2b008325e5e.jpg?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Home</p>
-          <ul class="dropdown-menu text-start">
-            <li><a class="dropdown-item" href="#">Furniture</a></li>
-            <li><a class="dropdown-item" href="#">Home Decor</a></li>
-            <li><a class="dropdown-item" href="#">Kitchen & Dining</a></li>
-            <li><a class="dropdown-item" href="#">Cleaning & Utility</a></li>
-          </ul>
-        </div>
-
-        <div class="col dropdown text-center category-item">
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/ad078723c45e639b.png?q=80" style="width: 5rem;" alt="">
-          <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Appliances</p>
-          <ul class="dropdown-menu text-start">
-            <li><a class="dropdown-item" href="#">Air Conditioners</a></li>
-            <li><a class="dropdown-item" href="#">Washing Machines</a></li>
-            <li><a class="dropdown-item" href="#">Microwave Ovens</a></li>
-            <li><a class="dropdown-item" href="#">Water Purifiers</a></li>
-          </ul>
-        </div>
-
-        <div class="col dropdown text-center category-item">
-
+          <div class="col dropdown text-center category-item">
           <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/a0289bc4c618004b.jpg?q=80" style="width: 5rem;" alt="">
           <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;">Travel</p>
           <ul class="dropdown-menu text-start">
@@ -142,18 +152,196 @@
         <div class="col dropdown text-center category-item">
           <img src="https://rukminim2.flixcart.com/fk-p-flap/98/98/image/59bd97ec3586e007.png?q=80" style="width: 5rem;" alt="">
           <p class="mt-2 mb-0 dropdown-toggle" data-bs-toggle="dropdown" style="cursor: pointer;"> Beauty, Toys & More</p>
-          <ul class="dropdown-menu text-start">
-            <li><a class="dropdown-item" href="#">Makeup</a></li>
-            <li><a class="dropdown-item" href="#">Skincare</a></li>
-            <li><a class="dropdown-item" href="#">Toys</a></li>
-            <li><a class="dropdown-item" href="#">Baby Products</a></li>
-          </ul>
+              <ul class="dropdown-menu text-start">
+                <li><a class="dropdown-item" href="#">Makeup</a></li>
+                <li><a class="dropdown-item" href="#">Skincare</a></li>
+                <li><a class="dropdown-item" href="#">Toys</a></li>
+               <li><a class="dropdown-item" href="#">Baby Products</a></li>
+              </ul>
+            </div>
+
         </div>
       </div>
+
     </div>
   </div>
 </div>
+
+                                                          <!-- Deals of the Day -->
+
+
+ <div class="container-fluid mt-5">
+  <div class="d-flex gap-3">
+    <div class="card shadow-sm border-1 flex-grow-1 deals-container">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+          
+          <div class="d-flex align-items-center gap-3">
+            <h5 class="card-title mb-0 fw-bold">Deals of the Day</h5>
+            <small class="text-muted">
+              <i class="bi bi-clock me-1"></i>22 : 07 : 36 Left
+            </small>
+          </div>
+
+          <button class="btn btn-primary px-4">VIEW ALL</button>
+        </div>
       </div>
+      <hr class="m-0">
+      <div class="position-relative">
+        <button class="scroll-btn">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+        <div class="card-body">
+          <div class="d-flex flex-nowrap deals-scroll gap-5">
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/watch/z/u/c/-resized-2-original-imahftsfpwgztzhh.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">Casio, Fastrack, Sonata...</p>
+              <p class="text-success mb-1 small">Upto 80%+Extra 10%Off</p>
+              <small class="text-muted">Knockout Deals!</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-home-temple/7/t/n/28-26-0-2-wooden-temple-2-goelite-28-original-imahgg9ry9qxtruz.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">Home Temples & More</p>
+              <p class="text-success mb-1 small">Extra 10% Off</p>
+              <small class="text-muted">Space Saving furniture</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/cases-covers/flip-cover/0/v/q/deeronepluspadgo11-35dgreen-proelite-original-imahkkfeznryhd6z.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">Premium Tablet Cases</p>
+              <p class="text-success mb-1 small">Extra 10% Off</p>
+              <small class="text-muted">For All Top Models</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/showpiece-figurine/2/w/i/5-12-sg-house-of-common-17-original-imah44djfaprznuy.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">Best Of Home Decor</p>
+              <p class="text-success mb-1 small">From ₹79</p>
+              <small class="text-muted">Lowest Price Ever</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/x/9/l/m-mss22pn078d-metronaut-original-imah2czrt97tahu9.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">Metronaut, Provogue &...</p>
+              <p class="text-success mb-1 small">From ₹249+Extra 10% Off</p>
+              <small class="text-muted">Jackets, Dresses & More</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/312/312/kvvad8w0/mobile/c/1/t/-original-imag8z7w3b42bjzy.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">LAVA A1500</p>
+              <p class="text-success mb-1 small">Flat ₹830</p>
+              <small class="text-muted">Now ₹999</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/312/312/kvvad8w0/mobile/c/1/t/-original-imag8z7w3b42bjzy.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">LAVA A1500</p>
+              <p class="text-success mb-1 small">Flat ₹830</p>
+              <small class="text-muted">Now ₹999</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/312/312/kvvad8w0/mobile/c/1/t/-original-imag8z7w3b42bjzy.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">LAVA A1500</p>
+              <p class="text-success mb-1 small">Flat ₹830</p>
+              <small class="text-muted">Now ₹999</small>
+            </div>
+            <div class="text-center" style="min-width: 180px;">
+              <img src="https://rukminim2.flixcart.com/image/312/312/kvvad8w0/mobile/c/1/t/-original-imag8z7w3b42bjzy.jpeg?q=70"
+                   class="img-fluid mb-2"
+                   style="height:150px; object-fit:contain;">
+              <p class="mb-1 small">LAVA A1500</p>
+              <p class="text-success mb-1 small">Flat ₹830</p>
+              <small class="text-muted">Now ₹999</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card banner-card shadow-sm d-none d-lg-block">
+      <img src="https://rukminim1.flixcart.com/flap/464/708/image/a33323ee3a5b0bc5.jpg?q=70"
+           class="img-fluid h-100"
+           style="object-fit:cover;">
+    </div>
+  </div>
+</div> 
+                                                  <!-- Books And music Instruments -->
+
+      <div class="card mt-5 shadow-sm border-1">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center">
+              <div>
+                 <h5 class="fw-bold mb-1">Books And music Instruments</h5>
+                 <small class="text-muted">Shop Now!</small>
+              </div>
+                <button class="btn btn-primary px-4">VIEW ALL</button>
+        </div>
+      </div>
+        <hr class="m-0">
+  <div class="card-body">
+    <div class="d-flex flex-nowrap deals-scroll gap-5">
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/harmonium/x/d/c/42-42-key-two-reed-bass-male-3-1-2-octave-coupler-harmonium-with-original-imah4xtfygbraq2z.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Harmoniums</p>
+        <p class="text-success mb-1 small">Up to 60% Off</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/l3g7gy80/shopsy-flute/c/g/h/1-g-scale-blue-panther-original-imagekkhqk7fgjsm.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Flutes</p>
+        <p class="text-success mb-1 small">Up to 80% Off</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/acoustic-guitar/1/c/1/int-38c-nt-intern-original-imahga8gqsqzzcgk.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Acoustic Guitars</p>
+        <p class="text-success mb-1 small">Starting ₹1799</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/microphone/p/w/z/wireless-lapel-mic-for-youtube-vlogging-recording-for-android-original-imah3jcgzcewf5kg.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Musical Accessories</p>
+        <p class="text-success mb-1 small">Up to 80% Off</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/microphone-accessory/b/c/9/dexter-758-classic-style-dynamic-vocal-microphone-karaoke-original-imahe6ryabzauzcn.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Microphone Accessories</p>
+        <p class="text-success mb-1 small">Up to 80% Off</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+      <div class="text-center" style="min-width: 180px;">
+        <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/acoustic-guitar/1/c/1/int-38c-nt-intern-original-imahga8gqsqzzcgk.jpeg?q=70"
+             class="img-fluid mb-2"
+             style="height:150px; object-fit:contain;">
+        <p class="mb-1 small fw-semibold">Acoustic Guitars</p>
+        <p class="text-success mb-1 small">Starting ₹1799</p>
+        <small class="text-muted">Shop Now!</small>
+      </div>
+    </div>
+  </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+ </body>
 </html>
